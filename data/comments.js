@@ -16,7 +16,7 @@ module.exports = [
   },
   {
     "_id": 4,
-    "body": "I can't wait to do the check point!",
+    "body": "I can wait to do the check point!",
     "postId": 1
   }
 ];
