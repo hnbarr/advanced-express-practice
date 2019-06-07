@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const { comments } = require('../data/index')
+const { list, show, create } = require('../controllers/comments')
+
 
 let lastId = comments[comments.length - 1]._id; //this is how I'll increment, then ++
 

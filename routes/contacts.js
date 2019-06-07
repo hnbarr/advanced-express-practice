@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const { contacts } = require('../data/index')
+const { list, show, create } = require('../controllers/contacts')
+
 
 let lastId = contacts[contacts.length - 1]._id; //this is how I'll increment, then ++
 
