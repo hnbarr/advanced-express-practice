@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { vehicles } = require('../data/index')
+// const { vehicles } = require('../data/index')
 const { list, show, create } = require('../controllers/vehicles')
 
 
@@ -15,7 +15,6 @@ router.get('/vehicles/:id', (req, res) => {
     // const getVehicle = vehicles.find(i => i._id == req.params.id);
     // res.send(getVehicle); 
     res.json(show(req.params.id));
-
 })
 
 router.post('/vehicles', (req, res) => {
@@ -24,7 +23,7 @@ router.post('/vehicles', (req, res) => {
     // newVehicle._id = lastId;
     // contacts.push(newVehicle);
     // res.send(newVehicle);
-    res.json(add(req.body));
+    res.json(create(req.body));
 })
 
 module.exports = router;

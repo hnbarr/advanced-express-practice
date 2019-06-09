@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const { comments } = require('../data/index')
+// const { comments } = require('../data/index')
 const { list, show, create } = require('../controllers/comments')
 
 
-let lastId = comments[comments.length - 1]._id; //this is how I'll increment, then ++
+// let lastId = comments[comments.length - 1]._id; //this is how I'll increment, then ++
 
 
 router.get('/comments', (req, res) => {
@@ -25,7 +25,7 @@ router.post('/comments', (req, res) => {
     // newComment._id = lastId;
     // contacts.push(newComment);
     // res.send(newComment);
-    res.json(add(req.body))
+    res.json(create(req.body))
 })
 
 module.exports = router;
