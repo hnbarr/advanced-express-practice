@@ -8,22 +8,24 @@ let lastId = comments[comments.length - 1]._id; //this is how I'll increment, th
 
 
 router.get('/comments', (req, res) => {
-    res.json(comments)
+    res.json(list())
 })
 
 router.get('/comments/:id', (req, res) => {
     // res.json(comments)
-    const getComment = comments.find(i => i._id == req.params.id);
-    res.send(getComment); 
+    // const getComment = comments.find(i => i._id == req.params.id);
+    // res.send(getComment); 
+    res,json(show(req.params.id))
 })
 
 router.post('/comments', (req, res) => {
-    const newComment = req.body;
-    newComment.postId = 1
-    lastId++;
-    newComment._id = lastId;
-    contacts.push(newComment);
-    res.send(newComment);
+    // const newComment = req.body;
+    // newComment.postId = 1
+    // lastId++;
+    // newComment._id = lastId;
+    // contacts.push(newComment);
+    // res.send(newComment);
+    res.json(add(req.body))
 })
 
 module.exports = router;
