@@ -6,7 +6,6 @@ const { list, show, create } = require('../controllers/comments')
 
 // let lastId = comments[comments.length - 1]._id; //this is how I'll increment, then ++
 
-
 router.get('/comments', (req, res) => {
     res.json(list())
 })

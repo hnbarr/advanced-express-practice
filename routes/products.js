@@ -17,7 +17,6 @@ router.get('/products/:id', (req, res) => {
     res.json(show(req.params.id));
 })
 
-
 router.post('/products', (req, res) => {
     // const newProduct = req.body;
     // lastId++;
