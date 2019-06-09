@@ -14,7 +14,7 @@ router.get('/comments/:id', (req, res) => {
     // res.json(comments)
     // const getComment = comments.find(i => i._id == req.params.id);
     // res.send(getComment); 
-    res,json(show(req.params.id))
+    res.json(show(req.params.id))
 })
 
 router.post('/comments', (req, res) => {

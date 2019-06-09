@@ -4,11 +4,11 @@ const list = () => {
     return products
 }
 
-const show = () => {
+const show = (id) => {
     return products.find(p => p._id == id);
 }
 
-const create = () => {
+const create = (newProduct) => {
     newProduct._id = products[products.length - 1]._id + 1;
     products.push(newProduct);
     return products;
